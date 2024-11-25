@@ -1,0 +1,24 @@
+I would like to thank vrv security for providing me this oppourtunity here i have explained my work
+
+#I have created a blog with the help of html,css,bootstrap,djanngo(backend),javascript(jquery),sqlite
+#i have implemented role based access control in admin panel of django.
+#i have also created login and logout page for my blog
+#i have created 4 types of user
+superuser(grant all access)
+admin(grant access by superuser)
+moderator(grant access by admin or superuser)
+user(grant access by above 3)
+
+i have also implemented decorators like permission_required(which user can access),loginrequired(login required) in view.py
+ for example in my views.py i have defined that moderator can't add comments directly,however he can add it from admin panel of django if superuser grants him that permission
+ #first open the project and go to the folder where manage.py is present in this case\blog\blog>
+and type manage.py runserver
+ #TO go to admin panel http://127.0.0.1:8000/admin
+ password:SHUBH@2005(for all users)
+ superuser:SHUBH
+ moderator:moderator
+ admin:SHUBH1
+ These are allusername you can login via these credentials
+ either in admin page or login page of blog
+
+ I would like to again thank you for providing me this oppourtunity
