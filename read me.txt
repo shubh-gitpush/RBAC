@@ -1,24 +1,85 @@
-I would like to thank vrv security for providing me this oppourtunity here i have explained my work
+# 📰 Django Role-Based Blogging Website
 
-#I have created a blog with the help of html,css,bootstrap,djanngo(backend),javascript(jquery),sqlite
-#i have implemented role based access control in admin panel of django.
-#i have also created login and logout page for my blog
-#i have created 4 types of user
-superuser(grant all access)
-admin(grant access by superuser)
-moderator(grant access by admin or superuser)
-user(grant access by above 3)
+This is a dynamic and secure **blogging platform** built using **HTML**, **CSS**, **Bootstrap**, **JavaScript (jQuery)** for the frontend, and **Django** with **SQLite** on the backend.
 
-i have also implemented decorators like permission_required(which user can access),loginrequired(login required) in view.py
- for example in my views.py i have defined that moderator can't add comments directly,however he can add it from admin panel of django if superuser grants him that permission
- #first open the project and go to the folder where manage.py is present in this case\blog\blog>
-and type manage.py runserver
- #TO go to admin panel http://127.0.0.1:8000/admin
- password:SHUBH@2005(for all users)
- superuser:SHUBH
- moderator:moderator
- admin:SHUBH1
- These are allusername you can login via these credentials
- either in admin page or login page of blog
+It supports **Role-Based Access Control**, **User Authentication**, and an intuitive **Admin Panel** for managing blog posts, users, and comments.
 
- I would like to again thank you for providing me this oppourtunity
+---
+
+## 🚀 Features
+
+✅ Create and manage blog posts  
+✅ Login & Logout system using Django Authentication  
+✅ Role-based access control (Superuser, Admin, Moderator, User)  
+✅ Add/Edit/Delete comments with permission control  
+✅ Responsive UI using Bootstrap  
+✅ Secure access via `@login_required` and `@permission_required` decorators  
+✅ Admin panel for full backend management
+
+---
+
+## 🔐 Role-Based Access System
+
+| Role       | Description                                                                 |
+|------------|-----------------------------------------------------------------------------|
+| **Superuser** | Full control. Can manage Admins, Moderators, Users, and all blog content. |
+| **Admin**     | Access granted by Superuser. Can manage Moderators and moderate content. |
+| **Moderator** | Access granted by Admin/Superuser. Can view/add comments from admin panel if permitted. |
+| **User**      | Default access. Can view blogs and comment if allowed.                   |
+
+🔒 Moderators **cannot add comments directly** from the UI — they must be approved via the Django Admin panel unless explicitly granted permission.
+
+---
+
+## 🛠 How to Run the Project
+
+### 1. Backend (Django)
+
+- Navigate to the Django project directory (where `manage.py` is located):
+
+
+cd blog/blog
+
+
+Run the development server:
+
+
+python manage.py runserver
+Visit in your browser:
+
+http://127.0.0.1:8000/
+Access Admin Panel:
+
+
+http://127.0.0.1:8000/admin
+🧪 Test User Credentials
+Role	Username	Password
+Superuser	SHUBH	SHUBH@2005
+Admin	SHUBH1	SHUBH@2005
+Moderator	moderator	SHUBH@2005
+
+You can log in with these credentials via the login page or the Django admin panel.
+
+🔧 Permissions System (Implemented in views.py)
+@login_required: Ensures only authenticated users can access certain views.
+
+@permission_required('app.permission_name'): Grants fine-grained control over which user roles can perform specific actions.
+
+Example:
+
+python
+
+@permission_required('blog.can_add_comment', raise_exception=True)
+def add_comment(request):
+
+
+🧠 Tech Stack
+Frontend: HTML, CSS, Bootstrap, JavaScript (jQuery)
+
+Backend: Django (Python), SQLite
+
+Authentication: Django’s built-in system
+
+Admin Panel: Fully integrated with role management
+
+
