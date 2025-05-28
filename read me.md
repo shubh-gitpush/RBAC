@@ -88,6 +88,9 @@ python manage.py migrate</code></pre>
   <p>🔗 Visit: <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a></p>
 </ol>
 
+<p>screenshots</p>
+<img src="Screenshot 2025-05-28 091309.png"></img>
+
 
 
 <h2>📬 Contact</h2>
