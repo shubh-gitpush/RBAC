@@ -90,6 +90,9 @@ python manage.py migrate</code></pre>
 
 <p>screenshots</p>
 <img src="Screenshot 2025-05-28 091309.png"></img>
+<img src="Screenshot 2025-05-28 091210.png"></img>
+<img src="Screenshot 2025-05-28 091238.png"></img>
+<img src="Screenshot 2025-05-28 091251.png"></img>
 
 
 
